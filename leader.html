@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport meta tag ensures the page is responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title that appears in the browser tab -->
+    <title><a href="index.html">Hackloft</title>
+    <!-- Link to external CSS file for styling the page -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header section with navigation bar and page title -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <!-- Logo with a link to the homepage, styled with inline CSS -->
+                <h1 ><a class="nav-heading" style="
+                    text-decoration: none;   color: #f0ad4e; 
+                " href="index.html">Hackloft</a></h1>
+            </div>
+            <!-- Navigation menu with links to different sections of the site -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="problems.html">Problems</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="challenges.html">Challenges</a></li>
+                <li><a href="logout.html" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+        <!-- Page heading for the leaderboard section -->
+        <h1>Leaderboard</h1>
+    </header>
+    <!-- Main content section -->
+    <main>
+        <!-- Table to display the leaderboard data -->
+        <table id="leaderboard-table">
+            <thead>
+                <!-- Table headers for rank, name, points, and challenge action -->
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Points</th>
+                    <th>Challenge</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Leaderboard rows will be populated here by JavaScript -->
+            </tbody>
+        </table>
+       <!-- Add this modal HTML inside your main tag or at the end of your body tag -->
+<div id="challengeModal" style="display:none;">
+    <!-- Header of the modal, which will show the challenge details -->
+    <h2 id="challengeHeader">Challenge User</h2>
+    <!-- Dropdown for selecting a problem to challenge the user with -->
+    <select id="problemSelect">
+        <!-- Problem options will be populated here -->
+    </select>
+    <!-- Button to submit the challenge -->
+    <button id="submitChallenge">Send Challenge</button>
+    <!-- Button to cancel the challenge and close the modal -->
+    <button onclick="document.getElementById('challengeModal').style.display='none';">Cancel</button>
+</div>
+    </main>
+    
+    <!-- Link to external JavaScript file that handles leaderboard functionality -->
+    <script src="js/leaderboard.js"></script>
+    <footer class="leader" style="margin-top: 400px;">
+        <p>&copy; 2024 Hackloft</p>
+    </footer>
+</body>
+</html>

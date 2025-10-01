@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><a href="index.html">Hackloft</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/monaco-editor@0.28.1/min/vs/editor/editor.main.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/monaco-editor@0.28.1/min/vs/loader.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1 ><a class="nav-heading" style="
+                    text-decoration: none;   color: #f0ad4e; 
+                " href="index.html">Hackloft</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="problems.html">Problems</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="challenges.html">Challenges</a></li>
+                <li><a href="leader.html">LeaderBoard</a></li>
+                <li><a href="logout.html" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="problem-panel">
+            <h3 id="problem-title">Problem Title</h3>
+            <p id="problem-description">Problem description...</p>
+            <h4>Sample Input:</h4>
+            <pre id="problem-sample-input">Sample input...</pre>
+            <h4>Sample Output:</h4>
+            <pre id="problem-sample-output">Sample output...</pre>
+        </aside>
+
+        <div class="editor-panel">
+            <!-- Language selector dropdown -->
+            <select id="language-selector">
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="cpp">C++</option>
+                <option value="java">Java</option>
+            </select>
+
+            <div id="code-editor" style="height: 400px;"></div>
+            <button id="run-code-btn">Run Code</button>
+            <button id="submit-btn" disabled>Submit Solution</button>
+            <h4>Output:</h4>
+            <pre id="output"></pre>
+        </div>
+    </div>
+
+    <script src="js/problemData.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/compiler.js"></script>
+
+
+
+    <script>
+    require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@0.28.1/min/vs' } });
+require(['vs/editor/editor.main'], function () {
+    // Map to store editor code for each language
+    const languageCodeMap = {
+        'python': '# Write your Python code here',
+        'javascript': '// Write your JavaScript code here',
+        'cpp': '// Write your C++ code here',
+        'java': '// Write your Java code here'
+    };
+
+    // Initialize Monaco Editor with Python as default
+    let currentLanguage = 'python';
+    window.editor = monaco.editor.create(document.getElementById('code-editor'), {
+        value: languageCodeMap[currentLanguage],
+        language: currentLanguage,
+        theme: 'vs-dark',
+        automaticLayout: true
+    });
+
+    // Language selector change event
+    document.getElementById('language-selector').addEventListener('change', function () {
+        const selectedLanguage = this.value;
+
+        // Save current editor content to the map
+        languageCodeMap[currentLanguage] = window.editor.getValue();
+
+        // Update editor to new language and load saved code (or default)
+        currentLanguage = selectedLanguage;
+        monaco.editor.setModelLanguage(window.editor.getModel(), selectedLanguage);
+        window.editor.setValue(languageCodeMap[selectedLanguage]);
+    });
+});
+
+    </script>
+</body>
+</html>

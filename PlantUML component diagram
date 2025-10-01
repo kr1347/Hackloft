@@ -1,0 +1,14 @@
+@startuml
+package "LeetCode-Style Coding Platform" {
+  [UI]
+  [User]
+  [Database]
+  [Problem Repository]
+
+  [UI] --> [User] : update user progress
+  [UI] --> [Problem Repository] : display coding problems
+  [User] --> [Database] : save progress and achievements
+  [Problem Repository] --> [Database] : retrieve/update problem data
+  [Database] --> [Problem Repository] : access problem sets
+}
+@enduml

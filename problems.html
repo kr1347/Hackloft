@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><a href="index.html">Hackloft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1 ><a class="nav-heading" style="
+                    text-decoration: none;   color: #f0ad4e; 
+                " href="index.html">Hackloft</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="problems.html">Problems</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="challenges.html">Challenges</a></li>
+                <li><a href="leader.html">LeaderBoard</a></li>
+                <li><a href="logout.html" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="problems">
+        <h3>Available Problems</h3>
+
+        <!-- Dropdown to filter problems by difficulty -->
+        <label for="difficulty-select">Filter by Difficulty:</label>
+        <select id="difficulty-select" class="difficulty-select">
+            <option value="All">All</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+        </select>
+
+        <!-- List of problems will be populated here -->
+        <div id="problem-list" class="problem-list"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hackloft</p>
+    </footer>
+
+    <script src="js/problems.js"></script>
+</body>
+</html>

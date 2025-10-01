@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackloft</title>
+    <!-- Link to external CSS stylesheet for styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header and navigation bar -->
+    <header>
+        <nav class="navbar">
+            <!-- Logo section -->
+            <div class="logo">
+                <h1 >
+                    <!-- Logo is a link back to the homepage -->
+                    <a class="nav-heading" style="
+                    text-decoration: none;   color: #f0ad4e; 
+                " href="index.html">Hackloft</a></h1>
+            </div>
+            <!-- Navigation links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="problems.html">Problems</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="leader.html">LeaderBoard</a></li>
+                <li><a href="logout.html" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+        <!-- Title for the page -->
+        <h1>My Challenges</h1>
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <!-- Container for challenges the user has been invited to -->
+        <div id="challenges-container">
+            <!-- Challenges will be populated here -->
+            <h2>Challenges You Have Invited</h2>
+            <!-- Challenges will be dynamically populated here by JavaScript -->
+        </div>
+        <!-- Container for challenges the user has initiated -->
+        <div id="challenges-container-for-challenger">
+            <!-- Challenges will be populated here -->
+            <h2>Challenges You Have Challenged</h2>
+            <!-- Challenges will be dynamically populated here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Link to the external JavaScript file for handling challenges -->
+    <script src="js/challenge.js"></script>
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2024 Hackloft</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,8 @@
+In this sprint, I focused on connecting Hackloft’s backend API to the frontend, enabling Python code execution and ensuring seamless communication between the two. My primary contributions included refining payload formatting, handling asynchronous responses, and improving the homepage styling for a clearer structure of input and output areas. This allowed for real-time feedback on code execution, enhancing user experience on our platform.
+
+One challenge I faced was debugging server communication issues, particularly with payload errors during data transfer. I resolved this by using detailed logging to monitor API flow, identifying and correcting formatting issues. Additionally, managing version dependencies between libraries required careful updates and testing for compatibility.
+
+This sprint taught me a lot about API handling and asynchronous functions in a live coding environment. I also improved my troubleshooting skills, particularly through targeted logging to resolve complex backend issues.
+
+Looking forward, I aim to improve modularization in our codebase. Breaking down components into smaller, reusable modules would simplify the structure and enhance maintainability. Additionally, establishing more error-handling guidelines would provide a smoother user experience and reduce execution issues. These adjustments will help streamline our workflow in future sprints.
+

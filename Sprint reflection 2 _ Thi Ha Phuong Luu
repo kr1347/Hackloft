@@ -1,0 +1,14 @@
+•	What did you accomplish? (what are your key individual contributions to the team's progress)
+We have changed the idea to leet code, which allows users to search what it is and what it is used for. Hence, I found the database, a coding problem that users regularly encounter. 
+•	What challenges did you encounter? (any individual roadblocks or difficulties and how they were addressed)
+-	One of the biggest challenges I encountered was seeking the database and resources to put them on the project. Because there are a number of coding problems, I must find all the syntax and logic errors that users always make mistakes.
+-	Another barrier that I saw is time management. Since the semester is nearly finished, we are trying to divide tasks into each member to get the project done on time. We decided to put the functions on ClickUp and implement them singly. 
+-	The last one is the algorithms and data structure. It is hard for me to choose the best algorithm with data structure fit with the problem statement. Moreover, sometimes, I struggle to find the complex code’s debug. Hence, I want to break the problems smaller to debug step-by-step. 
+•	What did you learn? (Reflect on any new skills, tools, or insights that you gained)
+-	I have gained many experiences in Python code. I attempted to access many resources and YouTube to practice Python on Jupiter. 
+-	I must often consider and test the code to apply the correct algorithm for specific problems. 
+-	I increased my knowledge of data structures, enabling me to complete the project more efficiently and understand how to optimize data storage.
+-	I improve my skills in using Clickup, Gitlab, Jupiter notebook, PlantUML
+•	What could have been improved?  (Suggest areas where you could improve your own work or the team's process in the next sprint)
+-	I will improve the code by debugging to make sure my code is accurate and efficient. 
+-	Time management is very important, so I will organize the tasks clearly and ensure that nothing is missed. 
